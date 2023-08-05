@@ -27,7 +27,7 @@ export const sample_foods: Food[] = [
   },
   {
     id:'3',
-    name: 'Hamburger',
+    name: 'Burger',
     price: 5,
     cookTime: '10-15',
     favorite: false,
@@ -77,7 +77,7 @@ export const sample_tags:Tag[] = [
   { name: 'Pizza', count: 2 },
   { name: 'Lunch', count: 3 },
   { name: 'SlowFood', count: 2 },
-  { name: 'Hamburger', count: 1 },
+  // { name: 'Hamburger', count: 1 },
   { name: 'Fry', count: 1 },
   { name: 'Soup', count: 1 },
 ]
