@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="details">
+        <app-title title="Register"></app-title>
+        <form action="" [formGroup]="registerForm" (ngSubmit)="submit()">
+
+            <div class="input-container">
+                <label for="">Name</label>
+                <div>
+                    <input type="" placeholder="Name" formControlName="name"/>
+                </div>
+                <!-- <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
+                    <div *ngIf="fc['email'].errors['required']">Should not be Empty</div>
+                    <div *ngIf="fc['email'].errors['email']">Email is not valid</div>
+                </div> -->
+            </div>
+            <div class="input-container">
+                <label for="">Email</label>
+                <div>
+                    <input type="email" placeholder="Email" formControlName="email"/>
+                </div>
+                <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
+                    <div *ngIf="fc['email'].errors['required']">Should not be Empty</div>
+                    <div *ngIf="fc['email'].errors['email']">Email is not valid</div>
+                </div>
+            </div>
+            <div class="input-container">
+                <label for="">password</label>
+                <div>
+                    <input type="password" placeholder="password" formControlName="password"/>
+                </div>
+                <!-- <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
+                    <div *ngIf="fc['email'].errors['required']">Should not be Empty</div>
+                    <div *ngIf="fc['email'].errors['email']">Email is not valid</div>
+                </div> -->
+            </div>
+            <div class="input-container">
+                <label for="">confirm password</label>
+                <div>
+                    <input type="password" placeholder="confirm password" formControlName="confirm password"/>
+                </div>
+                <!-- <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
+                    <div *ngIf="fc['email'].errors['required']">Should not be Empty</div>
+                    <div *ngIf="fc['email'].errors['email']">Email is not valid</div>
+                </div> -->
+            </div>
+
+            <div class="input-container">
+                <label for="">Address</label>
+                <div>
+                    <input type="" placeholder="Address" formControlName="address"/>
+                </div>
+                <!-- <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
+                    <div *ngIf="fc['email'].errors['required']">Should not be Empty</div>
+                    <div *ngIf="fc['email'].errors['email']">Email is not valid</div>
+                </div> -->
+            </div>  
+            <div class="button">
+                <button type="submit" >Register</button>
+            </div>
+            <div class="login">
+                Already a user? &nbsp;
+                <a href="" routerLink="/login" [queryParams]="{returnUrl:returnUrl}">
+                    Login Here
+                </a>
+            </div>          
+        </form>
+    </div>
+</div>
