@@ -3,17 +3,51 @@
         <app-title title="Register"></app-title>
         <form action="" [formGroup]="registerForm" (ngSubmit)="submit()">
 
-            <div class="input-container">
+
+            <text-input
+            [control]="fc['name']"
+            [showErrorWhen]="isSubmitted"
+            label="name">
+            </text-input>
+
+            <text-input
+            [control]="fc['email']"
+            [showErrorWhen]="isSubmitted"
+            label="Email"
+            type="email">
+            </text-input>
+
+            <text-input
+            [control]="fc['password']"
+            [showErrorWhen]="isSubmitted"
+            label="Password"
+            type="password">
+            </text-input>
+
+            <text-input
+            [control]="fc['confirmPassword']"
+            [showErrorWhen]="isSubmitted"
+            label="confirmPassword"
+            type="password">
+            </text-input>
+
+            <text-input
+            [control]="fc['address']"
+            [showErrorWhen]="isSubmitted"
+            label="Address">
+            </text-input>
+
+            <!-- <div class="input-container">
                 <label for="">Name</label>
                 <div>
                     <input type="" placeholder="Name" formControlName="name"/>
                 </div>
-                <!-- <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
+                <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
                     <div *ngIf="fc['email'].errors['required']">Should not be Empty</div>
                     <div *ngIf="fc['email'].errors['email']">Email is not valid</div>
                 </div> -->
-            </div>
-            <div class="input-container">
+            <!-- </div> -->
+            <!-- <div class="input-container">
                 <label for="">Email</label>
                 <div>
                     <input type="email" placeholder="Email" formControlName="email"/>
@@ -27,36 +61,37 @@
                 <label for="">password</label>
                 <div>
                     <input type="password" placeholder="password" formControlName="password"/>
-                </div>
+                </div> -->
                 <!-- <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
                     <div *ngIf="fc['email'].errors['required']">Should not be Empty</div>
                     <div *ngIf="fc['email'].errors['email']">Email is not valid</div>
                 </div> -->
-            </div>
+            <!-- </div>
             <div class="input-container">
                 <label for="">confirm password</label>
                 <div>
-                    <input type="password" placeholder="confirm password" formControlName="confirm password"/>
-                </div>
+                    <input type="password" placeholder="confirm password" formControlName="confirm password"/> -->
+                <!-- </div> -->
                 <!-- <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
                     <div *ngIf="fc['email'].errors['required']">Should not be Empty</div>
                     <div *ngIf="fc['email'].errors['email']">Email is not valid</div>
                 </div> -->
-            </div>
+            <!-- </div> -->
 
-            <div class="input-container">
+            <!-- <div class="input-container">
                 <label for="">Address</label>
                 <div>
                     <input type="" placeholder="Address" formControlName="address"/>
-                </div>
+                </div> --> 
                 <!-- <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
                     <div *ngIf="fc['email'].errors['required']">Should not be Empty</div>
                     <div *ngIf="fc['email'].errors['email']">Email is not valid</div>
                 </div> -->
-            </div>  
-            <div class="button">
+            <!-- </div>   -->
+            <!-- <div class="button">
                 <button type="submit" >Register</button>
-            </div>
+            </div> -->
+            <default-button text="Register"></default-button>
             <div class="login">
                 Already a user? &nbsp;
                 <a href="" routerLink="/login" [queryParams]="{returnUrl:returnUrl}">
