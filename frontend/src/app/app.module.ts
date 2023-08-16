@@ -18,6 +18,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RegisterComponent } from './components/pages/register/register.component';
 import { LoadingComponent } from './components/partials/loading/loading.component'
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
+import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
+import { InputContainerComponent } from './components/partials/input-container/input-container.component';
+import { InputValidationComponent } from './components/partials/input-validation/input-validation.component';
+import { TextInputComponent } from './components/partials/text-input/text-input.component';
+import { DefaultButtonComponent } from './components/partials/default-button/default-button.component';
+import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +37,13 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     NotFoundComponent,
     LoginPageComponent,
     RegisterComponent,
-    LoadingComponent
+    LoadingComponent,
+    CheckoutPageComponent,
+    InputContainerComponent,
+    InputValidationComponent,
+    TextInputComponent,
+    DefaultButtonComponent,
+    OrderItemsListComponent
   ],
   imports: [
     BrowserModule,

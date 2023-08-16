@@ -47,7 +47,7 @@ ngOnInit(): void {
     name:fv.name,
     email:fv.email,
     password:fv.password,
-    confirmpassword:fv.confirmPassword,
+    confirmPassword:fv.confirmPassword,
     address:fv.address
   };
 
