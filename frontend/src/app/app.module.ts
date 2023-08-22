@@ -25,6 +25,7 @@ import { TextInputComponent } from './components/partials/text-input/text-input.
 import { DefaultButtonComponent } from './components/partials/default-button/default-button.component';
 import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
 import { MapComponent } from './components/partials/map/map.component';
+import { AuthInterceptor } from './auth/guards/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +61,9 @@ import { MapComponent } from './components/partials/map/map.component';
     })
   ],
   providers: [
-    {provide:HTTP_INTERCEPTORS,useClass:LoadingInterceptor,multi:true}
+    {provide:HTTP_INTERCEPTORS,useClass:LoadingInterceptor,multi:true},
+    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}
+
   ],
   bootstrap: [AppComponent]
 })
